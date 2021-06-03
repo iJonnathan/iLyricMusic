@@ -72,6 +72,6 @@ export default {
   height: 100% !important;
   width: 100% !important;
   background: url('./assets/background.png');
-    position: absolute; top: 0; left: 0;
+  position: absolute; top: 0; left: 0;
 }
 </style>
