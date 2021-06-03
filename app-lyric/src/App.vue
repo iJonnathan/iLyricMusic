@@ -25,7 +25,8 @@ export default {
   },
   data(){
     return {
-      AUTH_URL : "https://accounts.spotify.com/authorize?client_id=da7b7d21cdef42099a1cb5cdcb379df2&response_type=code&redirect_uri=http://localhost:8080/&scope=streaming%20user-read-email%20user-read-private%20user-library-read%20user-library-modify%20user-read-playback-state%20user-modify-playback-state",
+      //AUTH_URL : "https://accounts.spotify.com/authorize?client_id=da7b7d21cdef42099a1cb5cdcb379df2&response_type=code&redirect_uri=http://localhost:8080/&scope=streaming%20user-read-email%20user-read-private%20user-library-read%20user-library-modify%20user-read-playback-state%20user-modify-playback-state",
+      AUTH_URL : "https://accounts.spotify.com/authorize?client_id=da7b7d21cdef42099a1cb5cdcb379df2&response_type=code&redirect_uri=https://ijonnathan.github.io/ilyricmusic/&scope=streaming%20user-read-email%20user-read-private%20user-library-read%20user-library-modify%20user-read-playback-state%20user-modify-playback-state",
       isLogged : false,
       code: new URLSearchParams(window.location.search).get("code"),
       data:null
