@@ -109,7 +109,7 @@ const scrapeWikipedia = async (url) => {
   //console.log(infoArtist)
   return {info_artist:infoArtist, url_img_artist:urlImg}
 }
-app.listen(process.env.PORT || 3000, () => {
+app.listen(process.env.PORT || 7000, () => {
   //a = await scrapeWikipedia("https://es.wikipedia.org/wiki/Rammstein")
   console.log("iniciando ilyricmusic server")
 })

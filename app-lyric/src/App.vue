@@ -71,8 +71,7 @@ export default {
   margin-top: 0px;
   height: 100% !important;
   width: 100% !important;
-  background: url('./assets/background.png')
-    center no-repeat;
+  background: url('./assets/background.png');
     position: absolute; top: 0; left: 0;
 }
 </style>
