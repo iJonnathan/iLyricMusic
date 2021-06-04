@@ -1,3 +1,4 @@
+var http = require('https');
 require("dotenv").config()
 const express = require("express")
 const cors = require("cors")
@@ -37,6 +38,7 @@ app.post("/refresh", (req, res) => {
 
 app.post("/login", (req, res) => {
   const code = req.body.code
+  console.log("code: "+code)
   const spotifyApi = new SpotifyWebApi({
     redirectUri: process.env.REDIRECT_URI,
     clientId: process.env.CLIENT_ID,
@@ -90,6 +92,10 @@ app.get("/getDataTrack", async (req, res) => {
   })
 })
 
+app.get("/init", async (req, res) => {
+
+  res.send({msj:"good"})
+})
 
 const scrapeWikipedia = async (url) => {
   const browser = await puppeteer.launch()
@@ -111,5 +117,5 @@ const scrapeWikipedia = async (url) => {
 }
 app.listen(process.env.PORT || 7000, () => {
   //a = await scrapeWikipedia("https://es.wikipedia.org/wiki/Rammstein")
-  console.log("iniciando ilyricmusic server")
+  console.log("iniciando ilyricmusic server "+process.env.CLIENT_ID)
 })

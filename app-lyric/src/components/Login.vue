@@ -20,7 +20,9 @@ export default {
      }
   },
   
-  
+  mounted(){
+    alert(this.AUTH_URL)
+  }
 }
 </script>
 
